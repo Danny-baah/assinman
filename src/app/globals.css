@@ -1,26 +1,194 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* ── Legacy tokens (kept for existing sections) ─────────────────── */
+    --bg-light: #f9f8f5;
+    --bg-surface: #ffffff;
+    --bg-dark: #0c1117;
+    --bg-dark-surface: #141b24;
+    --text-primary: #11161e;
+    --text-muted: #5e6977;
+    --text-light: #f3f4f6;
+    --accent-gold: #c59b4b;
+    --accent-gold-hover: #b0873a;
+    --border-subtle: #e6e3dc;
+    --border-dark: #222c38;
+
+    /* ── Brand tokens derived from the official AAN logo ────────────── */
+    --brand-green: #1b4d2e;
+    --brand-green-deep: #112d1c;
+    --brand-green-mid: #214f30;
+    --brand-green-light: #2a6b40;
+    --brand-green-muted: rgba(27, 77, 46, 0.92);
+    --brand-burgundy: #7a1c1c;
+    --brand-burgundy-hover: #8f2222;
+    --brand-ivory: #f5f0e8;
+    --brand-silver: #c8cdd4;
+    --brand-charcoal: #1a1f24;
+    --brand-charcoal-surface: #20272f;
+    --brand-charcoal-border: #2c3540;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    font-family:
+      var(--font-sans),
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--brand-burgundy);
+    color: #ffffff;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Editorial Typography ─────────────────────────────────────────────── */
+.font-editorial {
+  font-family: var(--font-serif), "Playfair Display", Georgia, serif;
+}
+
+/* ── Hover lift micro-interaction ─────────────────────────────────────── */
+.hover-lift {
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   KEYFRAME DEFINITIONS — declared unconditionally so they always exist.
+   Suppressed via animation: none inside prefers-reduced-motion: reduce.
+   ════════════════════════════════════════════════════════════════════════ */
+
+@keyframes hero-image-reveal {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes hero-image-drift {
+  from {
+    transform: scale(1.03);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes nav-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes line-grow {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* ── Animation utility classes ─────────────────────────────────────────── */
+
+.nav-animate {
+  animation: nav-slide-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+
+.hero-image-animate {
+  animation:
+    hero-image-reveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both,
+    hero-image-drift 10s cubic-bezier(0.16, 1, 0.3, 1) 1.2s both;
+}
+
+.hero-line-animate {
+  animation: line-grow 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+  transform-origin: left;
+}
+
+.hero-eyebrow-animate {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+}
+
+.hero-heading-animate {
+  animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.72s both;
+}
+
+.hero-body-animate {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.92s both;
+}
+
+.hero-cta-animate {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.08s both;
+}
+
+.hero-stats-animate {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.22s both;
+}
+
+.mobile-menu-animate {
+  animation: fade-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.dropdown-animate {
+  animation: fade-up 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Reduced-motion: suppress ALL non-essential animation ──────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
