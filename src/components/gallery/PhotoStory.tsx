@@ -8,11 +8,11 @@ export function PhotoStory() {
     <section className="relative w-full h-[450px] sm:h-[550px] lg:h-[650px] overflow-hidden flex items-center justify-center">
       {/* Cinematic Full-Width Photographic Background */}
       <Image
-        src="/assets/cta-editorial.jpg"
-        alt="Ghanaian nurses walking purposefully through the corridor of a modern health facility"
+        src="/assin/photo_2026-10-16_12-04-19.jpg"
+        alt="Assinman Registered General Nurses celebrating graduation and professional excellence"
         fill
         sizes="100vw"
-        className="object-cover object-center brightness-[0.45] contrast-[1.05]"
+        className="object-cover object-top brightness-[0.45] contrast-[1.05]"
       />
 
       {/* Subtle Film Grain / Color Grading Tint */}

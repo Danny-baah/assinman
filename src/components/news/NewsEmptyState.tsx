@@ -5,7 +5,7 @@ import { Newspaper } from "lucide-react";
 
 export function NewsEmptyState() {
   return (
-    <section className="relative w-full bg-white py-20 lg:py-28 border-b border-[#1b4d2e]/10 overflow-hidden">
+    <section className="relative w-full bg-white py-12 sm:py-16 lg:py-20 border-b border-[#1b4d2e]/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Editorial Two-Column Empty State Composition */}

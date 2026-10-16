@@ -51,7 +51,7 @@ export function BenefitsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-32 bg-white text-[#11161e] overflow-hidden"
+      className="py-16 sm:py-20 lg:py-24 bg-white text-[#11161e] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">

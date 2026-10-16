@@ -102,11 +102,11 @@ export function DonationConfirmationForm({
     <section
       ref={sectionRef}
       id="confirm-donation"
-      className="bg-[#f8f5ee] py-16 sm:py-24 border-t border-[#1b4d2e]/15 relative overflow-hidden"
+      className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 border-t border-[#1b4d2e]/15 relative overflow-hidden"
     >
       <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Header */}
-        <div className="max-w-2xl mb-12 sm:mb-14">
+        <div className="max-w-2xl mb-10 sm:mb-12">
           <div
             className={`flex items-center gap-3 mb-4 transition-all duration-700 ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"

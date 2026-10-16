@@ -6,7 +6,7 @@ import { ArrowRight, Mail } from "lucide-react";
 
 export function GalleryClosing() {
   return (
-    <section className="relative w-full bg-white py-16 sm:py-20 border-t border-[#1b4d2e]/10">
+    <section className="relative w-full bg-white py-12 sm:py-16 lg:py-18 border-t border-[#1b4d2e]/10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         
         {/* Eyebrow */}

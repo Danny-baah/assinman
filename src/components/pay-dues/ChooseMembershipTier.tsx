@@ -68,9 +68,11 @@ const TIERS: Tier[] = [
 export function ChooseMembershipTier({
   onSelectTier,
   selectedTierId,
+  onPayDuesClick,
 }: {
   onSelectTier?: (tierId: string, amount: string) => void;
   selectedTierId?: string;
+  onPayDuesClick?: () => void;
 }) {
   const [activeTier, setActiveTier] = useState<"annual" | "lifetime" | "reunion">("lifetime");
   const [copied, setCopied] = useState(false);
@@ -107,11 +109,11 @@ export function ChooseMembershipTier({
     <section
       ref={sectionRef}
       id="choose-tier"
-      className="bg-[#f8f5ee] py-16 sm:py-24 border-t border-[#1b4d2e]/15 relative overflow-hidden"
+      className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 border-t border-[#1b4d2e]/15 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Header */}
-        <div className="max-w-3xl mb-14 sm:mb-18">
+        <div className="max-w-3xl mb-10 sm:mb-14">
           <div
             className={`flex items-center gap-3 mb-4 transition-all duration-700 ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
@@ -183,13 +185,25 @@ export function ChooseMembershipTier({
                   {/* Price */}
                   <div className="pb-6 mb-6 border-b border-[#1b4d2e]/10">
                     <div className="flex items-baseline gap-2">
-                      <span className="font-editorial text-4xl sm:text-5xl font-normal text-[#1b4d2e] tracking-tight">
+                      <span
+                        className={`font-editorial text-4xl sm:text-5xl font-normal text-[#1b4d2e] tracking-tight ${
+                          tier.price !== "Custom"
+                            ? "filter blur-[6px] select-none inline-block transition-all"
+                            : ""
+                        }`}
+                        title={tier.price !== "Custom" ? "Official amount under review" : undefined}
+                      >
                         {tier.price}
                       </span>
                       <span className="text-xs font-medium text-[#738290] uppercase tracking-wider">
                         / {tier.cadence}
                       </span>
                     </div>
+                    {tier.price !== "Custom" && (
+                      <span className="text-[10px] font-semibold text-[#1b4d2e] tracking-wider uppercase block mt-1.5">
+                        Amount Pending Official Announcement
+                      </span>
+                    )}
                   </div>
 
                   {/* Benefits Checklist */}
@@ -211,17 +225,18 @@ export function ChooseMembershipTier({
                 {/* Selection Action Button */}
                 <button
                   type="button"
-                  onClick={() => handleSelect(tier)}
+                  onClick={() => {
+                    handleSelect(tier);
+                    if (onPayDuesClick) onPayDuesClick();
+                  }}
                   className={`w-full py-3.5 px-6 rounded-sm text-xs sm:text-[12.5px] font-semibold tracking-[0.14em] uppercase transition-all duration-200 flex items-center justify-center gap-2 ${
-                    isSelected
-                      ? "bg-[#1b4d2e] text-white shadow-sm"
-                      : isFeatured
-                      ? "bg-[#1b4d2e] text-white hover:bg-[#112d1c]"
+                    isFeatured
+                      ? "bg-[#1b4d2e] text-white hover:bg-[#112d1c] shadow-sm"
                       : "border border-[#11161e]/25 text-[#11161e] hover:bg-[#11161e] hover:text-[#f8f5ee]"
                   }`}
                 >
-                  {isSelected && <CheckCircle2 className="w-4 h-4" />}
-                  <span>{isSelected ? "Selected" : tier.buttonText}</span>
+                  <CreditCard className="w-3.5 h-3.5" />
+                  <span>Pay Dues</span>
                 </button>
               </div>
             );
@@ -259,7 +274,11 @@ export function ChooseMembershipTier({
                   Active Selection:
                 </span>
                 <span className="text-sm font-bold text-[#1b4d2e]">
-                  {currentTierObj.name} ({currentTierObj.price})
+                  {currentTierObj.name} (
+                  <span className={currentTierObj.price !== "Custom" ? "filter blur-[5px] select-none inline-block" : ""}>
+                    {currentTierObj.price}
+                  </span>
+                  )
                 </span>
               </div>
             </div>
@@ -306,8 +325,11 @@ export function ChooseMembershipTier({
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#738290] block mb-1">
                   Amount
                 </span>
-                <span className="font-editorial text-xl font-bold text-[#1b4d2e] block">
+                <span className="font-editorial text-xl font-bold text-[#1b4d2e] block filter blur-[6px] select-none">
                   {currentTierObj.price}
+                </span>
+                <span className="text-[9px] font-semibold text-[#1b4d2e] uppercase tracking-wider block mt-0.5">
+                  To Be Announced
                 </span>
               </div>
             </div>
@@ -348,10 +370,10 @@ export function ChooseMembershipTier({
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-[#1b4d2e]/15">
               <button
                 type="button"
-                onClick={scrollToConfirmation}
+                onClick={onPayDuesClick || scrollToConfirmation}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-sm bg-[#1b4d2e] text-white text-xs font-semibold tracking-wider uppercase hover:bg-[#112d1c] transition-all shadow-xs"
               >
-                <span>I Have Paid — Go to Confirmation Form</span>
+                <span>Pay Dues Now</span>
                 <ArrowDown className="w-3.5 h-3.5" />
               </button>
 

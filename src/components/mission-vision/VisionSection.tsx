@@ -13,7 +13,7 @@ export function VisionSection() {
       ref={sectionRef}
       id="vision"
       aria-labelledby="vision-heading"
-      className="relative overflow-hidden bg-[#f5f1e8] py-24 sm:py-32 lg:py-40"
+      className="relative overflow-hidden bg-[#f5f1e8] py-12 sm:py-16 lg:py-20"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         
@@ -33,11 +33,11 @@ export function VisionSection() {
               }}
             >
               <Image
-                src="/assets/cta-nurses.jpg"
-                alt="Ghanaian nursing and healthcare leadership"
+                src="/assin/photo_2026-10-16_12-04-32.jpg"
+                alt="Assinman Nursing and Midwifery Training College graduates celebrating with caps and gowns"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-center grayscale-[10%] contrast-[1.04]"
+                className="object-cover object-top contrast-[1.04]"
               />
               <div
                 className="absolute inset-0 pointer-events-none"

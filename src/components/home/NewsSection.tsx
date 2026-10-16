@@ -2,11 +2,11 @@ import React from "react";
 
 export function NewsSection() {
   return (
-    <section className="py-24 lg:py-32 bg-[#faf9f6] text-[#11161e] overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#faf9f6] text-[#11161e] overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
         {/* ── Header ─────────────────────────────────────────────── */}
-        <div className="space-y-5 mb-16">
+        <div className="space-y-5 mb-12 sm:mb-14">
           <div className="flex items-center gap-3">
             <span className="inline-block h-px w-8 bg-[#1b4d2e]" />
             <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#1b4d2e]">

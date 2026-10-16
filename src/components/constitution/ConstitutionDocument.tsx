@@ -62,7 +62,7 @@ export function ConstitutionDocument() {
   };
 
   return (
-    <section className="bg-[#f8f5ee] py-10 sm:py-14 lg:py-20 relative">
+    <section className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Mobile Sticky Table of Contents Accordion */}
         <div className="lg:hidden sticky top-[68px] z-30 mb-8 -mx-6 sm:-mx-10 px-6 sm:px-10 py-3 bg-[#f8f5ee]/95 backdrop-blur-md border-y border-[#1b4d2e]/15 shadow-sm">

@@ -4,11 +4,11 @@ import { ArrowRight, Check } from "lucide-react";
 
 export function DuesSection() {
   return (
-    <section className="py-24 lg:py-32 bg-[#faf9f6] text-[#11161e] overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#faf9f6] text-[#11161e] overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
         {/* ── Header ─────────────────────────────────────────────── */}
-        <div className="max-w-3xl space-y-5 mb-16">
+        <div className="max-w-3xl space-y-5 mb-12 sm:mb-14">
           <div className="flex items-center gap-3">
             <span className="inline-block h-px w-8 bg-[#1b4d2e]" />
             <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#1b4d2e]">
@@ -55,7 +55,10 @@ export function DuesSection() {
               {/* Price */}
               <div className="space-y-1">
                 <div className="flex items-baseline gap-3">
-                  <span className="font-editorial text-5xl sm:text-6xl font-bold text-[#f5f0e8] tracking-tight">
+                  <span
+                    className="font-editorial text-5xl sm:text-6xl font-bold text-[#f5f0e8] tracking-tight filter blur-[6px] select-none transition-all inline-block"
+                    title="Amount to be confirmed"
+                  >
                     GH₵500
                   </span>
                   <span className="text-xs text-white/35 uppercase tracking-wider">one-time</span>
@@ -75,14 +78,14 @@ export function DuesSection() {
 
             <div className="mt-10">
               <Link
-                href="/pay-dues"
+                href="/membership/pay-dues"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-sm text-[12.5px] font-bold tracking-[0.12em] uppercase text-white transition-all duration-200 active:scale-[0.97] group focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
                 style={{
                   background: "linear-gradient(135deg, #8f2222 0%, #7a1c1c 100%)",
                   boxShadow: "0 2px 20px rgba(122,28,28,0.45)",
                 }}
               >
-                <span>Pay Now</span>
+                <span>Pay Dues</span>
                 <ArrowRight
                   className="w-4 h-4 transition-transform group-hover:translate-x-1"
                   aria-hidden="true"
@@ -106,7 +109,10 @@ export function DuesSection() {
 
                 <div className="space-y-1">
                   <div className="flex items-baseline gap-2.5">
-                    <span className="font-editorial text-4xl font-bold text-[#11161e] tracking-tight">
+                    <span
+                      className="font-editorial text-4xl font-bold text-[#11161e] tracking-tight filter blur-[6px] select-none transition-all inline-block"
+                      title="Amount to be confirmed"
+                    >
                       GH₵100
                     </span>
                     <span className="text-xs text-[#9aa0a8] uppercase tracking-wider">per year</span>
@@ -122,10 +128,10 @@ export function DuesSection() {
 
               <div className="mt-6">
                 <Link
-                  href="/pay-dues"
+                  href="/membership/pay-dues"
                   className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-sm text-[12px] font-bold uppercase tracking-[0.12em] border border-[#1b4d2e] text-[#1b4d2e] hover:bg-[#1b4d2e] hover:text-white transition-all duration-200 group focus:outline-none"
                 >
-                  <span>Pay Now</span>
+                  <span>Pay Dues</span>
                   <ArrowRight
                     className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1"
                     aria-hidden="true"

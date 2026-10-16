@@ -11,7 +11,7 @@ export function InstitutionalMarkers() {
     <section
       ref={markersRef}
       aria-label="Institutional Markers"
-      className="relative overflow-hidden bg-[#f5f1e8] py-20 sm:py-28"
+      className="relative overflow-hidden bg-[#f5f1e8] py-12 sm:py-16 lg:py-20"
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         

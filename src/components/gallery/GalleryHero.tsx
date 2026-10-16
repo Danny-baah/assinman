@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function GalleryHero() {
   return (
-    <section className="relative w-full bg-[#fbfaf7] pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden border-b border-[#1b4d2e]/10">
+    <section className="relative w-full bg-[#fbfaf7] pt-8 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14 overflow-hidden border-b border-[#1b4d2e]/10">
       {/* Editorial Watermark / Background Accent */}
       <div className="absolute top-12 right-0 -mr-16 select-none pointer-events-none opacity-[0.03] text-[#1b4d2e] font-serif text-[140px] lg:text-[220px] font-bold tracking-tighter leading-none hidden md:block">
         ARCHIVE
@@ -63,8 +63,8 @@ export function GalleryHero() {
               {/* Main Image Container with sharp editorial aesthetic */}
               <div className="relative aspect-[16/11] sm:aspect-[16/10] w-full overflow-hidden bg-[#1b4d2e]/5 shadow-xl">
                 <Image
-                  src="/assets/gallery-cinematic.jpg"
-                  alt="Atmospheric group gathering of Ghanaian healthcare alumni and professionals"
+                  src="/assin/photo_2026-10-16_12-04-26.jpg"
+                  alt="Atmospheric gathering of Assinman healthcare alumni on campus grounds"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 58vw"

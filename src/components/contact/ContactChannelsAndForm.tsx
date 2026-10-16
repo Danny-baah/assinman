@@ -90,7 +90,7 @@ export function ContactChannelsAndForm() {
   };
 
   return (
-    <section className="relative w-full bg-white py-20 lg:py-28 border-b border-[#1b4d2e]/10 overflow-hidden">
+    <section className="relative w-full bg-white py-12 sm:py-16 lg:py-20 border-b border-[#1b4d2e]/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           

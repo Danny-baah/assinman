@@ -11,13 +11,13 @@ export function UpcomingEventsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-32 bg-white text-[#11161e] overflow-hidden"
+      className="py-16 sm:py-20 lg:py-24 bg-white text-[#11161e] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
         {/* ── Header ─────────────────────────────────────────────── */}
         <div
-          className={`space-y-5 mb-16 transition-all duration-700 ease-out ${
+          className={`space-y-5 mb-12 sm:mb-14 transition-all duration-700 ease-out ${
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >

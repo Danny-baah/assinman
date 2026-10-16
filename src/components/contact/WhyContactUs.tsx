@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function WhyContactUs() {
   return (
-    <section className="relative w-full bg-[#fbfaf7] py-20 lg:py-28 border-b border-[#1b4d2e]/10 overflow-hidden">
+    <section className="relative w-full bg-[#fbfaf7] py-12 sm:py-16 lg:py-20 border-b border-[#1b4d2e]/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
@@ -17,8 +17,8 @@ export function WhyContactUs() {
               
               <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full overflow-hidden bg-[#1b4d2e]/5 border border-[#1b4d2e]/15 shadow-md">
                 <Image
-                  src="/assets/gallery-conversation.jpg"
-                  alt="Ghanaian healthcare professionals and alumni leaders gathered in conversation during a symposium"
+                  src="/assin/photo_2026-10-16_12-04-06.jpg"
+                  alt="Assinman alumni leaders gathered in fellowship wearing honors medals"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"

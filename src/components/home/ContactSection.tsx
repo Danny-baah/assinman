@@ -29,7 +29,7 @@ export function ContactSection() {
       />
 
       {/* Main Container — generous vertical breathing room */}
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 py-24 sm:py-32 lg:py-40">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 py-16 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
           
           {/* Typographic Core — Left / Dominant */}
@@ -141,11 +141,11 @@ export function ContactSection() {
               }}
             >
               <Image
-                src="/assets/cta-editorial.jpg"
-                alt="Assinman alumni fellowship"
+                src="/assin/photo_2026-10-16_12-04-19.jpg"
+                alt="Assinman alumni fellowship and registered nurses"
                 fill
                 sizes="(max-width: 640px) 192px, (max-width: 1024px) 224px, 256px"
-                className="object-cover object-center grayscale-[15%] contrast-[1.03]"
+                className="object-cover object-top contrast-[1.03]"
               />
             </div>
           </div>

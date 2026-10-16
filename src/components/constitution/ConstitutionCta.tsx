@@ -14,7 +14,7 @@ export function ConstitutionCta() {
       ref={ctaRef}
       id="constitution-cta"
       aria-labelledby="const-cta-heading"
-      className="relative overflow-hidden bg-[#f8f5ee] py-14 sm:py-18 lg:py-20 border-t border-[#1b4d2e]/15"
+      className="relative overflow-hidden bg-[#f8f5ee] py-12 sm:py-16 lg:py-18 border-t border-[#1b4d2e]/15"
     >
       <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
         {/* Eyebrow */}

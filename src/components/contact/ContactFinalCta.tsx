@@ -6,7 +6,7 @@ import { ArrowRight, Compass } from "lucide-react";
 
 export function ContactFinalCta() {
   return (
-    <section className="relative w-full bg-[#fbfaf7] py-16 sm:py-20">
+    <section className="relative w-full bg-[#fbfaf7] py-12 sm:py-16 lg:py-18">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         
         {/* Eyebrow */}

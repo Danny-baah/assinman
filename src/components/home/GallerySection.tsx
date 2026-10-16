@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 
 interface GalleryPhoto {
   id: string;
-  category: "Reunion 2024" | "AGM" | "Outreach" | "Mentorship" | "Events";
+  category: "Graduation" | "Alumni Gathering" | "Convocation" | "Fellowship";
   title: string;
   image: string;
   /** tailwind classes for grid span + aspect ratio */
@@ -18,59 +18,45 @@ interface GalleryPhoto {
 const galleryPhotos: GalleryPhoto[] = [
   {
     id: "gal-1",
-    category: "Reunion 2024",
-    title: "Alumni Fellowship Dinner & Awards",
-    image:
-      "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80",
+    category: "Alumni Gathering",
+    title: "Assinman Alumni Gathering & Campus Fellowship",
+    image: "/assin/photo_2026-10-16_12-04-26.jpg",
     gridClass: "col-span-1 sm:col-span-2",
     aspectClass: "aspect-[16/10]",
   },
   {
     id: "gal-2",
-    category: "AGM",
-    title: "Executive Deliberations & Annual General Assembly",
-    image:
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80",
+    category: "Graduation",
+    title: "Registered General Nurse Inductees & Graduates",
+    image: "/assin/photo_2026-10-16_12-04-19.jpg",
     gridClass: "col-span-1",
     aspectClass: "aspect-[4/5]",
   },
   {
     id: "gal-3",
-    category: "Outreach",
-    title: "Community Health Counseling Outreach",
-    image:
-      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80",
+    category: "Convocation",
+    title: "Graduation Celebration & Cap-and-Gown Milestone",
+    image: "/assin/photo_2026-10-16_12-04-32.jpg",
     gridClass: "col-span-1",
     aspectClass: "aspect-[4/5]",
   },
   {
     id: "gal-4",
-    category: "Mentorship",
-    title: "Senior Preceptors Clinical Round Session",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80",
-    gridClass: "col-span-1",
-    aspectClass: "aspect-[4/3]",
-  },
-  {
-    id: "gal-5",
-    category: "Events",
-    title: "Graduation Convocation Procession",
-    image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+    category: "Fellowship",
+    title: "Alumni Medals & Honors Assembly",
+    image: "/assin/photo_2026-10-16_12-04-06.jpg",
     gridClass: "col-span-1 sm:col-span-2",
-    aspectClass: "aspect-[16/9]",
+    aspectClass: "aspect-[16/10]",
   },
 ];
 
 const categories = [
   "All",
-  "Reunion 2024",
-  "AGM",
-  "Outreach",
-  "Mentorship",
-  "Events",
-] as const;
+  "Graduation",
+  "Alumni Gathering",
+  "Convocation",
+  "Fellowship",
+];
 
 export function GallerySection() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
@@ -81,7 +67,7 @@ export function GallerySection() {
       : galleryPhotos.filter((p) => p.category === activeCategory);
 
   return (
-    <section className="py-24 lg:py-32 bg-white text-[#11161e] overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white text-[#11161e] overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
 
         {/* ── Header ─────────────────────────────────────────────── */}

@@ -26,7 +26,7 @@ export function DonationsHero() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16"
+      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14"
     >
       {/* Background Architectural Grid Accent */}
       <div
@@ -125,12 +125,12 @@ export function DonationsHero() {
               {/* Main Image */}
               <div className="relative rounded-xl overflow-hidden shadow-xl aspect-[4/3] bg-[#11161e]/5">
                 <Image
-                  src="/assets/donations-students.jpg"
-                  alt="Assinman NMTC nursing students learning and training in the simulation lab"
+                  src="/assin/photo_2026-10-16_12-04-32.jpg"
+                  alt="Assinman NMTC graduates supported by alumni giving"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
+                  className="object-cover object-top transform hover:scale-105 transition-transform duration-700 ease-out"
                 />
 
                 <div

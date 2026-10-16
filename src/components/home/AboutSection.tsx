@@ -13,7 +13,7 @@ export function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-32 bg-[#faf9f6] text-[#11161e] overflow-hidden"
+      className="py-16 sm:py-20 lg:py-24 bg-[#faf9f6] text-[#11161e] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-start">
@@ -27,32 +27,16 @@ export function AboutSection() {
             {/* Primary portrait — authentic group of professional nurses */}
             <div className="relative h-[480px] sm:h-[560px] lg:h-[640px] rounded-sm overflow-hidden shadow-2xl">
               <Image
-                src="/assets/about-nurses.jpg"
-                alt="Group of dedicated professional nurses and healthcare alumni — Assinman Alumni Network"
+                src="/assin/photo_2026-10-16_12-04-32.jpg"
+                alt="Assinman Nursing and Midwifery Training College graduates celebrating with diplomas"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
+                className="object-cover object-top transition-transform duration-700 hover:scale-[1.03]"
                 priority
               />
               {/* Subtle bottom shadow vignette */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0e2418]/40 via-transparent to-transparent pointer-events-none" />
             </div>
-
-            {/* Floating inset — smaller accent image */}
-            <div
-              className="absolute -bottom-6 -right-4 sm:-right-8 w-36 sm:w-44 h-44 sm:h-56 rounded-sm overflow-hidden shadow-2xl border-2 border-white hidden sm:block"
-              style={{ zIndex: 10 }}
-            >
-              <Image
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=85"
-                alt="Nursing professionals — community care"
-                fill
-                sizes="180px"
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-[#0e2418]/15" />
-            </div>
-
             {/* Brand accent bar */}
             <div
               className="absolute top-8 -left-0 w-1 h-20 rounded-full"

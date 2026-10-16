@@ -20,7 +20,7 @@ export function WhyJoinHero() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16"
+      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14"
     >
       {/* Background Architectural Grid Accent */}
       <div
@@ -124,8 +124,8 @@ export function WhyJoinHero() {
               {/* Main Editorial Image Container */}
               <div className="relative rounded-xl overflow-hidden shadow-xl aspect-[4/3] sm:aspect-[4/3] bg-[#11161e]/5">
                 <Image
-                  src="/assets/why-join-hero.jpg"
-                  alt="Assinman Alumni Network healthcare professionals gathering and conversing warmly in a modern courtyard"
+                  src="/assin/photo_2026-10-16_12-04-26.jpg"
+                  alt="Assinman Alumni Network members gathering on campus grounds"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 42vw"

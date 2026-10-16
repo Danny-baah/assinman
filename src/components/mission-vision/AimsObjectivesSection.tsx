@@ -69,17 +69,17 @@ export function AimsObjectivesSection() {
       ref={sectionRef}
       id="aims-objectives"
       aria-labelledby="objectives-heading"
-      className="relative overflow-hidden bg-[#f5f1e8] py-24 sm:py-32 lg:py-40"
+      className="relative overflow-hidden bg-[#f5f1e8] py-12 sm:py-16 lg:py-20"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        {/* Top Editorial Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-10 border-b border-[#1b4d2e]/15 mb-10 sm:mb-14">
           
-          {/* Left Column: Sticky Editorial Heading & Summary (5 cols) */}
-          <div className="lg:col-span-5 lg:sticky lg:top-32">
-            
+          {/* Left: Eyebrow & Heading */}
+          <div className="max-w-2xl">
             <div
-              className={`flex items-center gap-3 mb-6 transition-all duration-700 ease-out motion-reduce:transition-none ${
+              className={`flex items-center gap-3 mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
               }`}
             >
@@ -91,20 +91,21 @@ export function AimsObjectivesSection() {
 
             <h2
               id="objectives-heading"
-              className={`font-editorial tracking-[-0.02em] font-normal leading-[1.08] text-[#11161e] mb-6 transition-all duration-800 delay-100 ease-out motion-reduce:transition-none ${
+              className={`font-editorial tracking-[-0.02em] font-normal leading-[1.08] text-[#11161e] transition-all duration-800 delay-100 ease-out motion-reduce:transition-none ${
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
-                fontSize: "clamp(2.5rem, 5vw, 4.25rem)",
+                fontSize: "clamp(2.5rem, 5vw, 4rem)",
               }}
             >
-              Aims &amp;
-              <br />
-              <span className="italic text-[#1b4d2e]">Objectives</span>
+              Aims &amp; <span className="italic text-[#1b4d2e]">Objectives</span>
             </h2>
+          </div>
 
+          {/* Right: Explanatory Copy & Constitution Stamp */}
+          <div className="lg:max-w-md flex flex-col justify-end">
             <p
-              className={`text-[16px] sm:text-[17.5px] leading-relaxed text-[#556271] font-light max-w-md mb-8 transition-all duration-700 delay-200 ease-out motion-reduce:transition-none ${
+              className={`text-[15.5px] sm:text-[17px] leading-relaxed text-[#556271] font-light mb-6 transition-all duration-700 delay-200 ease-out motion-reduce:transition-none ${
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
@@ -115,44 +116,43 @@ export function AimsObjectivesSection() {
 
             {/* Institutional Framework Stamp */}
             <div
-              className={`border-t border-[#1b4d2e]/15 pt-6 flex items-center justify-between text-[11px] tracking-[0.2em] uppercase text-[#7a8793] transition-all duration-700 delay-300 ease-out motion-reduce:transition-none ${
+              className={`border-t border-[#1b4d2e]/15 pt-4 flex items-center justify-between text-[11px] tracking-[0.2em] uppercase text-[#7a8793] transition-all duration-700 delay-300 ease-out motion-reduce:transition-none ${
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
               }`}
             >
               <span>Constitution Art. II</span>
-              <span>8 Formal Mandates</span>
+              <span className="font-semibold text-[#1b4d2e]">8 Formal Mandates</span>
             </div>
-
           </div>
 
-          {/* Right Column: Structured Institutional Vertical Stream (7 cols) */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
-            {objectives.map((obj, i) => (
-              <div
-                key={obj.number}
-                className={`group border-b border-[#1b4d2e]/12 pb-6 sm:pb-8 transition-all duration-700 ease-out motion-reduce:transition-none ${
-                  inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-                style={{
-                  transitionDelay: `${150 + i * 60}ms`,
-                }}
-              >
-                <div className="flex items-baseline gap-4 sm:gap-6 mb-3">
-                  <span className="font-editorial text-[1.4rem] sm:text-[1.65rem] font-light text-[#1b4d2e]/60 group-hover:text-[#1b4d2e] transition-colors">
-                    {obj.number}
-                  </span>
-                  <h3 className="font-editorial text-[1.35rem] sm:text-[1.55rem] font-normal text-[#11161e] tracking-tight group-hover:text-[#1b4d2e] transition-colors">
-                    {obj.title}
-                  </h3>
-                </div>
-                
-                <p className="pl-8 sm:pl-12 text-[15px] sm:text-[16px] leading-relaxed text-[#505d6c] font-light">
-                  {obj.description}
-                </p>
+        </div>
+
+        {/* 2-Column Balanced Grid: 4 on each side */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-8 sm:gap-y-10">
+          {objectives.map((obj, i) => (
+            <div
+              key={obj.number}
+              className={`group border-b border-[#1b4d2e]/12 pb-6 sm:pb-8 transition-all duration-700 ease-out motion-reduce:transition-none ${
+                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
+              style={{
+                transitionDelay: `${120 + i * 50}ms`,
+              }}
+            >
+              <div className="flex items-baseline gap-4 sm:gap-5 mb-2.5">
+                <span className="font-editorial text-[1.4rem] sm:text-[1.65rem] font-light text-[#1b4d2e]/60 group-hover:text-[#1b4d2e] transition-colors shrink-0">
+                  {obj.number}
+                </span>
+                <h3 className="font-editorial text-[1.25rem] sm:text-[1.45rem] font-normal text-[#11161e] tracking-tight group-hover:text-[#1b4d2e] transition-colors">
+                  {obj.title}
+                </h3>
               </div>
-            ))}
-          </div>
-
+              
+              <p className="pl-8 sm:pl-10 text-[14.5px] sm:text-[15.5px] leading-relaxed text-[#505d6c] font-light">
+                {obj.description}
+              </p>
+            </div>
+          ))}
         </div>
 
       </div>

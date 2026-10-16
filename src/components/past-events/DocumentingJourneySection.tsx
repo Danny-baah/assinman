@@ -12,7 +12,7 @@ export function DocumentingJourneySection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f8f5ee] py-16 sm:py-20 border-t border-[#1b4d2e]/15 relative overflow-hidden"
+      className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 border-t border-[#1b4d2e]/15 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -24,8 +24,8 @@ export function DocumentingJourneySection() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-md aspect-[4/3] bg-[#11161e]/5 border border-[#1b4d2e]/15">
               <Image
-                src="/assets/why-join-hero.jpg"
-                alt="Atmospheric editorial portrait of Ghanaian healthcare alumni"
+                src="/assin/photo_2026-10-16_12-04-26.jpg"
+                alt="Atmospheric editorial portrait of Assinman healthcare alumni on campus grounds"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-cover object-center"

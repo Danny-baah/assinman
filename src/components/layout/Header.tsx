@@ -14,7 +14,7 @@ interface NavItem {
 
 const aboutLinks: NavItem[] = [
   { title: "Mission & Vision", href: "/about/mission-vision" },
-  { title: "Executive Members", href: "/about/executive-members" },
+  { title: "Interim Executives", href: "/about/executive-members" },
   { title: "Constitution", href: "/about/constitution" },
 ];
 

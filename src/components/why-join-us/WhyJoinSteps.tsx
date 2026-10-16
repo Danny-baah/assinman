@@ -24,7 +24,14 @@ const STEPS = [
     num: "03",
     label: "Step 03",
     title: "Pay Your Dues",
-    desc: "Complete your membership by paying your annual dues of GH₵100 or lifetime dues of GH₵500.",
+    desc: (
+      <>
+        Complete your membership by paying your annual dues (
+        <span className="filter blur-[4px] select-none font-semibold">GH₵100</span>)
+        or lifetime dues (
+        <span className="filter blur-[4px] select-none font-semibold">GH₵500</span>).
+      </>
+    ),
     icon: CreditCard,
   },
   {
@@ -44,11 +51,11 @@ export function WhyJoinSteps() {
     <section
       ref={sectionRef}
       id="how-it-works"
-      className="bg-[#f8f5ee] py-16 sm:py-24 border-t border-[#1b4d2e]/15 relative overflow-hidden"
+      className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 border-t border-[#1b4d2e]/15 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Header */}
-        <div className="max-w-3xl mb-14 sm:mb-18">
+        <div className="max-w-3xl mb-10 sm:mb-14">
           <div
             className={`flex items-center gap-3 mb-4 transition-all duration-700 ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
@@ -130,6 +137,18 @@ export function WhyJoinSteps() {
                           className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1b4d2e] hover:text-[#112d1c] transition-colors"
                         >
                           <span>Start Form</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
+                      </div>
+                    )}
+
+                    {idx === 2 && (
+                      <div className="mt-5 pt-4 border-t border-[#1b4d2e]/10">
+                        <Link
+                          href="/membership/pay-dues"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1b4d2e] hover:text-[#112d1c] transition-colors"
+                        >
+                          <span>Pay Dues</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </Link>
                       </div>

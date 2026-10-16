@@ -31,8 +31,8 @@ const BENEFITS: BenefitItem[] = [
       "Introductions to senior professionals",
     ],
     icon: Network,
-    image: "/assets/about-nurses.jpg",
-    imageAlt: "Assinman Alumni Network nurses and midwives connecting",
+    image: "/assin/photo_2026-10-16_12-04-19.jpg",
+    imageAlt: "Assinman Alumni Network registered general nurses and graduates connecting",
   },
   {
     id: "career-dev",
@@ -75,8 +75,8 @@ const BENEFITS: BenefitItem[] = [
       "Equipment and facility donations",
     ],
     icon: Compass,
-    image: "/assets/why-join-mentorship.jpg",
-    imageAlt: "Ghanaian healthcare alumni mentoring students in a seminar library room",
+    image: "/assin/photo_2026-10-16_12-04-06.jpg",
+    imageAlt: "Assinman alumni members wearing honors medals",
   },
   {
     id: "welfare",
@@ -116,11 +116,11 @@ export function WhyJoinBenefits() {
     <section
       ref={sectionRef}
       id="benefits"
-      className="bg-[#f8f5ee] py-16 sm:py-24 border-t border-[#1b4d2e]/15 relative overflow-hidden"
+      className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 border-t border-[#1b4d2e]/15 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
+        <div className="max-w-3xl mb-10 sm:mb-14">
           <div
             className={`flex items-center gap-3 mb-4 transition-all duration-700 ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"

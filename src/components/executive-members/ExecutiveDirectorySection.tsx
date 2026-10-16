@@ -9,46 +9,70 @@ interface Executive {
   number: string;
   name: string;
   role: string;
+  badge: string;
   description: string;
   image: string;
+  imagePosition?: string;
+  featured?: boolean;
+  duties?: string[];
 }
 
 const executives: Executive[] = [
   {
     number: "01",
-    name: "Kwame Asante",
+    name: "Joshua Kpordedzi",
     role: "President",
+    badge: "Interim President",
     description:
-      "Provides overall leadership for the association and helps guide its direction, priorities, and collective vision.",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
+      "Provides strategic interim leadership, steers the association's governance and constitutional alignment, and coordinates institutional engagement to unite alumni across all generations.",
+    image: "/executives/joshua-kpordedzi.jpg",
+    imagePosition: "object-[48%_15%]",
+    featured: true,
+    duties: ["Executive Governance", "Institutional Representation", "Strategic Direction"],
   },
   {
     number: "02",
-    name: "Ama Boateng",
-    role: "Vice President",
+    name: "Stella Korliky",
+    role: "Electoral Commissioner",
+    badge: "Interim Electoral Commissioner",
     description:
-      "Supports the President in advancing the association's programmes while helping strengthen engagement across the alumni community.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+      "Oversees electoral administration, constitutional vetting frameworks, and transparent transition guidelines to guarantee fair, democratic representation across the network.",
+    image: "/executives/stella-korliky.jpg",
+    imagePosition: "object-[center_20%]",
+    duties: ["Electoral Frameworks", "Vetting & Compliance", "Democratic Transition"],
   },
   {
     number: "03",
-    name: "Efua Owusu",
-    role: "Secretary",
+    name: "Asibey Felix",
+    role: "Auditor",
+    badge: "Interim Auditor",
     description:
-      "Coordinates the association's records, communications, meetings, and administrative activities.",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+      "Supervises financial auditing, accounting verification, asset registers, and fiduciary compliance to maintain rigorous fiscal transparency and accountability.",
+    image: "/executives/asibey-felix.jpg",
+    imagePosition: "object-[center_15%]",
+    duties: ["Fiscal Auditing", "Internal Controls", "Financial Transparency"],
   },
   {
     number: "04",
-    name: "Kofi Darko",
-    role: "Treasurer",
+    name: "Charity Egyir",
+    role: "Secretary",
+    badge: "Interim Secretary",
     description:
-      "Supports responsible financial administration and helps maintain transparency across the association's financial activities.",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+      "Coordinates secretariat administration, minutes of proceedings, official correspondence, statutory documentation, and inter-member communication flows.",
+    image: "/executives/charity-egyir.png",
+    imagePosition: "object-[center_18%]",
+    duties: ["Secretariat Operations", "Official Correspondence", "Records & Archives"],
+  },
+  {
+    number: "05",
+    name: "Emmanuel Obeng Asumaning",
+    role: "Welfare Officer",
+    badge: "Interim Welfare Officer",
+    description:
+      "Champions alumni welfare programs, member relief and benevolent support, celebratory recognitions, and community solidarity initiatives.",
+    image: "/executives/emmanuel-obeng-asumaning.jpg",
+    imagePosition: "object-[center_15%]",
+    duties: ["Member Welfare", "Benevolent Outreach", "Alumni Solidarity"],
   },
 ];
 
@@ -61,12 +85,12 @@ export function ExecutiveDirectorySection() {
       ref={sectionRef}
       id="executive-leadership"
       aria-labelledby="executives-heading"
-      className="relative overflow-hidden bg-[#fbf9f4] py-20 sm:py-28 lg:py-36"
+      className="relative overflow-hidden bg-[#fbf9f4] py-12 sm:py-16 lg:py-20"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-14 sm:mb-20">
+        <div className="max-w-3xl mb-10 sm:mb-14">
           <div
             className={`flex items-center gap-3 mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
@@ -74,7 +98,10 @@ export function ExecutiveDirectorySection() {
           >
             <span className="w-2 h-2 rounded-full bg-[#1b4d2e]" aria-hidden="true" />
             <span className="text-[11px] font-bold uppercase tracking-[0.26em] text-[#1b4d2e]">
-              Our Leadership
+              Our Interim Leadership
+            </span>
+            <span className="inline-flex items-center px-2 py-0.5 rounded-xs text-[9.5px] font-semibold uppercase tracking-wider bg-[#1b4d2e]/10 text-[#1b4d2e]">
+              Interim
             </span>
           </div>
 
@@ -87,7 +114,7 @@ export function ExecutiveDirectorySection() {
               fontSize: "clamp(2.35rem, 4.8vw, 3.75rem)",
             }}
           >
-            Executive Committee
+            Interim Executive Committee
           </h2>
 
           <p
@@ -95,17 +122,19 @@ export function ExecutiveDirectorySection() {
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            A committed team working together to guide the network, strengthen
-            alumni connections, and advance the shared vision of the association.
+            A committed interim team working together to coordinate network affairs,
+            strengthen alumni connections, uphold constitutional integrity, and advance the shared vision of the association.
           </p>
         </div>
 
-        {/* Editorial 2-Column Directory Grid */}
+        {/* Editorial Directory Grid: 1 Featured President + 4 Officers in 2x2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#1b4d2e]/12 border border-[#1b4d2e]/12">
           {executives.map((exec, idx) => (
             <div
               key={exec.number}
               className={`group relative bg-[#f8f5ee] p-8 sm:p-10 lg:p-12 transition-all duration-300 ease-out hover:bg-[#ffffff] ${
+                exec.featured ? "md:col-span-2" : ""
+              } ${
                 inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{
@@ -114,22 +143,35 @@ export function ExecutiveDirectorySection() {
             >
               {/* Member Numeral & Corner Micro-Indicator */}
               <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#1b4d2e]/10">
-                <span className="font-editorial text-[1.4rem] sm:text-[1.6rem] font-light text-[#8a96a3] group-hover:text-[#1b4d2e] transition-colors duration-300">
-                  {exec.number}
-                </span>
-                <span className="text-[#1b4d2e] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-                </span>
+                <div className="flex items-center gap-3">
+                  <span className="font-editorial text-[1.4rem] sm:text-[1.6rem] font-light text-[#8a96a3] group-hover:text-[#1b4d2e] transition-colors duration-300">
+                    {exec.number}
+                  </span>
+                  {exec.featured && (
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-xs text-[9px] font-bold uppercase tracking-wider bg-[#1b4d2e] text-white">
+                      Featured Officer
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#1b4d2e]/70">
+                    Interim
+                  </span>
+                  <span className="text-[#1b4d2e] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+                  </span>
+                </div>
               </div>
 
               {/* Portrait Avatar & Text Details Composition */}
-              <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+              <div className={`flex flex-col ${exec.featured ? "md:flex-row items-start gap-8 lg:gap-10" : "sm:flex-row items-start gap-6 sm:gap-8"}`}>
                 
                 {/* Refined Portrait Frame */}
                 <div
-                  className="relative w-28 sm:w-32 lg:w-36 shrink-0 overflow-hidden rounded-xs border transition-all duration-500 ease-out group-hover:scale-[1.02]"
+                  className={`relative shrink-0 overflow-hidden rounded-xs border transition-all duration-500 ease-out group-hover:scale-[1.02] ${
+                    exec.featured ? "w-36 sm:w-44 lg:w-48 aspect-[3/4] sm:aspect-[4/5]" : "w-28 sm:w-32 lg:w-36 aspect-[4/5]"
+                  }`}
                   style={{
-                    aspectRatio: "4 / 5",
                     borderColor: "rgba(27, 77, 46, 0.16)",
                     boxShadow: "0 6px 20px -6px rgba(17, 22, 30, 0.08)",
                   }}
@@ -138,8 +180,8 @@ export function ExecutiveDirectorySection() {
                     src={exec.image}
                     alt={`${exec.name} — ${exec.role}`}
                     fill
-                    sizes="(max-width: 640px) 112px, 144px"
-                    className="object-cover object-center grayscale-[12%] contrast-[1.04] transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes={exec.featured ? "(max-width: 640px) 144px, 192px" : "(max-width: 640px) 112px, 144px"}
+                    className={`object-cover ${exec.imagePosition || "object-center"} grayscale-[12%] contrast-[1.04] transition-transform duration-700 ease-out group-hover:scale-105`}
                   />
                   <div
                     className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -153,17 +195,39 @@ export function ExecutiveDirectorySection() {
                 {/* Identity & Short Description */}
                 <div className="space-y-3 flex-1">
                   <div>
-                    <h3 className="font-editorial text-2xl sm:text-[1.75rem] font-normal text-[#11161e] leading-snug group-hover:text-[#1b4d2e] transition-colors duration-300">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-[0.16em] px-2 py-0.5 rounded-xs bg-[#1b4d2e]/10 text-[#1b4d2e] border border-[#1b4d2e]/15">
+                        {exec.badge}
+                      </span>
+                    </div>
+                    <h3 className={`font-editorial font-normal text-[#11161e] leading-snug group-hover:text-[#1b4d2e] transition-colors duration-300 ${
+                      exec.featured ? "text-2xl sm:text-[2rem] lg:text-[2.2rem]" : "text-2xl sm:text-[1.75rem]"
+                    }`}>
                       {exec.name}
                     </h3>
-                    <span className="inline-block text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.16em] text-[#1b4d2e] mt-1">
+                    <span className="inline-block text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.16em] text-[#1b4d2e]/80 mt-0.5">
                       {exec.role}
                     </span>
                   </div>
 
-                  <p className="text-[14.5px] sm:text-[15.5px] leading-relaxed text-[#556372] font-light pt-2">
+                  <p className={`leading-relaxed text-[#556372] font-light pt-1 ${
+                    exec.featured ? "text-[15px] sm:text-[16.5px] max-w-2xl" : "text-[14.5px] sm:text-[15.5px]"
+                  }`}>
                     {exec.description}
                   </p>
+
+                  {exec.duties && (
+                    <div className="pt-2 flex flex-wrap gap-1.5">
+                      {exec.duties.map((duty) => (
+                        <span
+                          key={duty}
+                          className="text-[10px] sm:text-[10.5px] font-medium tracking-wide uppercase px-2.5 py-1 bg-white border border-[#1b4d2e]/12 text-[#2c3d31] rounded-xs"
+                        >
+                          {duty}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
               </div>

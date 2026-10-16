@@ -11,7 +11,7 @@ export function RegisterHero() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-10 lg:pt-14 pb-8 sm:pb-10"
+      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-8 sm:pb-10"
     >
       {/* Background Architectural Grid Accent */}
       <div

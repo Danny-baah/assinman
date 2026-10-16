@@ -11,7 +11,7 @@ export function UpcomingEventsHero() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-10 lg:pt-14 pb-10 sm:pb-12 border-b border-[#1b4d2e]/10"
+      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14 border-b border-[#1b4d2e]/10"
     >
       {/* Background Architectural Grid Accent */}
       <div

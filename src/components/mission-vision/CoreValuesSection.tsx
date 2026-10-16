@@ -65,12 +65,12 @@ export function CoreValuesSection() {
       ref={sectionRef}
       id="core-values"
       aria-labelledby="values-heading"
-      className="relative overflow-hidden bg-[#f8f5ee] py-24 sm:py-32 lg:py-40"
+      className="relative overflow-hidden bg-[#f8f5ee] py-12 sm:py-16 lg:py-20"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 sm:mb-24">
+        <div className="max-w-3xl mb-12 sm:mb-16">
           <div
             className={`flex items-center gap-3 mb-6 transition-all duration-700 ease-out motion-reduce:transition-none ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"

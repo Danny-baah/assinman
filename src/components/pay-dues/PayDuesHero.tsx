@@ -5,7 +5,11 @@ import Image from "next/image";
 import { ArrowDown, HeartHandshake, ShieldCheck } from "lucide-react";
 import { useInView } from "@/components/home/useInView";
 
-export function PayDuesHero() {
+interface PayDuesHeroProps {
+  onPayDuesClick?: () => void;
+}
+
+export function PayDuesHero({ onPayDuesClick }: PayDuesHeroProps = {}) {
   const heroRef = useRef<HTMLElement>(null);
   const inView = useInView(heroRef, { threshold: 0.1 });
 
@@ -19,7 +23,7 @@ export function PayDuesHero() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16"
+      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14"
     >
       {/* Background Architectural Grid Accent */}
       <div
@@ -88,7 +92,7 @@ export function PayDuesHero() {
             >
               <button
                 type="button"
-                onClick={scrollToTiers}
+                onClick={onPayDuesClick || scrollToTiers}
                 className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-sm text-[12.5px] font-semibold tracking-[0.14em] uppercase text-white bg-[#1b4d2e] hover:bg-[#112d1c] active:scale-[0.98] transition-all shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1b4d2e]"
               >
                 <span>Pay Your Dues</span>
@@ -118,7 +122,7 @@ export function PayDuesHero() {
               {/* Main Image */}
               <div className="relative rounded-xl overflow-hidden shadow-xl aspect-[4/3] bg-[#11161e]/5">
                 <Image
-                  src="/assets/why-join-hero.jpg"
+                  src="/assin/photo_2026-10-16_12-04-26.jpg"
                   alt="Assinman Alumni Network members united in professional fellowship"
                   fill
                   priority

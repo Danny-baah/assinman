@@ -12,8 +12,8 @@ const IMPACT_AREAS = [
     subtitle: "Empowering Deserving Students",
     desc: "Your donation helps fund scholarships for financially disadvantaged students at Assinman NMTC, ensuring that no deserving student is left behind due to financial constraints.",
     icon: GraduationCap,
-    image: "/assets/why-join-mentorship.jpg",
-    imageAlt: "Nursing mentors and students studying in a library seminar room",
+    image: "/assin/photo_2026-10-16_12-04-32.jpg",
+    imageAlt: "Assinman NMTC student graduates empowered by alumni scholarships",
   },
   {
     num: "02",
@@ -21,8 +21,8 @@ const IMPACT_AREAS = [
     subtitle: "Modernising Clinical Infrastructure",
     desc: "Contributions go towards improving infrastructure, purchasing medical equipment, and enhancing the learning environment at Assinman Nursing and Midwifery Training College.",
     icon: Building,
-    image: "/assets/donations-students.jpg",
-    imageAlt: "Assinman NMTC nursing students with medical simulation laboratory equipment",
+    image: "/assin/photo_2026-10-16_12-04-19.jpg",
+    imageAlt: "Assinman Registered General Nurses demonstrating clinical excellence",
   },
   {
     num: "03",
@@ -30,8 +30,8 @@ const IMPACT_AREAS = [
     subtitle: "Community Health & Fellowship",
     desc: "Donations fund alumni events, community health outreach programmes, and welfare support for members — keeping our network active, connected, and impactful.",
     icon: Users,
-    image: "/assets/about-nurses.jpg",
-    imageAlt: "Alumni healthcare professionals united in fellowship",
+    image: "/assin/photo_2026-10-16_12-04-26.jpg",
+    imageAlt: "Assinman alumni healthcare professionals united in fellowship on campus",
   },
 ];
 
@@ -43,11 +43,11 @@ export function WhereGivingGoes() {
     <section
       ref={sectionRef}
       id="where-giving-goes"
-      className="bg-[#f8f5ee] py-16 sm:py-24 border-t border-[#1b4d2e]/15 relative overflow-hidden"
+      className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 border-t border-[#1b4d2e]/15 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
+        <div className="max-w-3xl mb-10 sm:mb-14">
           <div
             className={`flex items-center gap-3 mb-4 transition-all duration-700 ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"

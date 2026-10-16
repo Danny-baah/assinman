@@ -11,11 +11,11 @@ export function EmptyArchiveState() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f8f5ee] py-16 sm:py-24 lg:py-28 relative overflow-hidden"
+      className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Editorial Two-Column Archival Card */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-10 sm:mb-14">
           {/* Left Column: Bold Archival Typography (5 cols) */}
           <div
             className={`lg:col-span-5 transition-all duration-700 ease-out ${

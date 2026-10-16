@@ -7,11 +7,11 @@ import { QUICK_LINKS } from "./types";
 
 export function ContactQuickLinks() {
   return (
-    <section className="relative w-full bg-white py-20 lg:py-28 border-b border-[#1b4d2e]/10">
+    <section className="relative w-full bg-white py-12 sm:py-16 lg:py-20 border-b border-[#1b4d2e]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14 border-b border-[#1b4d2e]/10 pb-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 sm:mb-12 border-b border-[#1b4d2e]/10 pb-6">
           <div>
             <div className="inline-flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-[#1b4d2e]" />

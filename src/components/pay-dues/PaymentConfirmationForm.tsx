@@ -19,8 +19,8 @@ const INITIAL_DATA: ConfirmationData = {
   fullName: "",
   phoneNumber: "",
   email: "",
-  duesType: "Annual Dues — GH₵100",
-  amountPaid: "100",
+  duesType: "Annual Dues",
+  amountPaid: "",
   transactionId: "",
   yearGroup: "",
 };
@@ -28,9 +28,11 @@ const INITIAL_DATA: ConfirmationData = {
 export function PaymentConfirmationForm({
   selectedDuesType,
   selectedAmount,
+  onPayDuesClick,
 }: {
   selectedDuesType?: string;
   selectedAmount?: string;
+  onPayDuesClick?: () => void;
 }) {
   const [formData, setFormData] = useState<ConfirmationData>(INITIAL_DATA);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -70,6 +72,10 @@ export function PaymentConfirmationForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (onPayDuesClick) {
+      onPayDuesClick();
+      return;
+    }
     if (!validate()) return;
 
     setIsSubmitting(true);
@@ -83,11 +89,11 @@ export function PaymentConfirmationForm({
     <section
       ref={sectionRef}
       id="confirmation-form"
-      className="bg-[#f8f5ee] py-16 sm:py-24 border-t border-[#1b4d2e]/15 relative overflow-hidden"
+      className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 border-t border-[#1b4d2e]/15 relative overflow-hidden"
     >
       <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Section Header */}
-        <div className="max-w-2xl mb-12 sm:mb-14">
+        <div className="max-w-2xl mb-10 sm:mb-12">
           <div
             className={`flex items-center gap-3 mb-4 transition-all duration-700 ease-out ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
@@ -246,8 +252,8 @@ export function PaymentConfirmationForm({
                       errors.duesType ? "border-[#a83232] bg-red-50/20" : "border-[#1b4d2e]/20 hover:border-[#1b4d2e]/40"
                     }`}
                   >
-                    <option value="Annual Dues — GH₵100">Annual Dues — GH₵100</option>
-                    <option value="Lifetime Membership — GH₵500">Lifetime Membership — GH₵500</option>
+                    <option value="Annual Dues">Annual Dues (Amount Pending Announcement)</option>
+                    <option value="Lifetime Membership">Lifetime Membership (Amount Pending Announcement)</option>
                     <option value="Reunion Contribution">Reunion Contribution</option>
                   </select>
                   {errors.duesType && (

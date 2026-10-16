@@ -101,13 +101,13 @@ export function HeroSection() {
       {/* ── Background Image ──────────────────────────────────────── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=85"
-          alt="Healthcare professionals and alumni community"
+          src="/assin/photo_2026-10-16_12-04-19.jpg"
+          alt="Assinman Alumni Network Registered General Nurses and graduates"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center hero-image-animate"
-          style={{ opacity: 0.48 }}
+          className="object-cover object-top sm:object-center hero-image-animate"
+          style={{ opacity: 0.42 }}
         />
 
         {/* Cinematic gradient layers */}

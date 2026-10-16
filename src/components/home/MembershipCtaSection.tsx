@@ -6,16 +6,16 @@ import { ArrowRight } from "lucide-react";
 
 export function MembershipCtaSection() {
   return (
-    <section className="relative py-28 lg:py-40 text-white overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-24 text-white overflow-hidden">
       {/* Background image — cinematic treatment */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2000&q=80"
-          alt="Graduation and alumni legacy"
+          src="/assin/photo_2026-10-16_12-04-26.jpg"
+          alt="Assinman Alumni Network members gathering on campus grounds"
           fill
           sizes="100vw"
           className="object-cover object-center"
-          style={{ opacity: 0.42 }}
+          style={{ opacity: 0.38 }}
         />
         {/* Layered green gradient — image stays visible */}
         <div

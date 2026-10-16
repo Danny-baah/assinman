@@ -7,9 +7,9 @@ import { ExecutiveDirectorySection } from "@/components/executive-members/Execut
 import { ExecutiveClosingCta } from "@/components/executive-members/ExecutiveClosingCta";
 
 export const metadata: Metadata = {
-  title: "Executive Members — Assinman Alumni Network",
+  title: "Interim Executive Members — Assinman Alumni Network",
   description:
-    "Meet the dedicated leaders steering the Assinman Alumni Network with vision and integrity.",
+    "Meet the interim executive leadership guiding the Assinman Alumni Network with dedication, integrity, and vision.",
 };
 
 export default function ExecutiveMembersPage() {

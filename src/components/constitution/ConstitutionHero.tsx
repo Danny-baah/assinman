@@ -10,7 +10,7 @@ export function ConstitutionHero() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-10 lg:pt-14 pb-12 sm:pb-16 lg:pb-18"
+      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14"
     >
       {/* Background Architectural Grid Accent */}
       <div

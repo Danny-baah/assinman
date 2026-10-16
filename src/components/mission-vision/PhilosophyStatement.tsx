@@ -11,7 +11,7 @@ export function PhilosophyStatement() {
     <section
       ref={statementRef}
       aria-label="Institutional Philosophy"
-      className="relative overflow-hidden py-24 sm:py-32 lg:py-36"
+      className="relative overflow-hidden py-12 sm:py-16 lg:py-20"
       style={{
         backgroundColor: "#112d1c",
       }}

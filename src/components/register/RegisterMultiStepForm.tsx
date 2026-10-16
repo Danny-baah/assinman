@@ -227,7 +227,7 @@ export function RegisterMultiStepForm() {
   };
 
   return (
-    <section className="bg-[#f8f5ee] pb-16 sm:pb-24 pt-2 relative">
+    <section className="bg-[#f8f5ee] pb-12 sm:pb-16 lg:pb-20 pt-2 relative">
       <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Success State */}
         {isSubmitted ? (

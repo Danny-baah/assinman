@@ -11,7 +11,7 @@ export function EmptyEventsState() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#f8f5ee] py-16 sm:py-24 lg:py-28 relative overflow-hidden"
+      className="bg-[#f8f5ee] py-12 sm:py-16 lg:py-20 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         {/* Editorial Two-Column Empty State */}

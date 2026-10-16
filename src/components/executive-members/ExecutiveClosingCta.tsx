@@ -14,7 +14,7 @@ export function ExecutiveClosingCta() {
       ref={ctaRef}
       id="join-cta"
       aria-labelledby="exec-cta-heading"
-      className="relative overflow-hidden bg-[#f8f5ee] py-16 sm:py-20 lg:py-24"
+      className="relative overflow-hidden bg-[#f8f5ee] py-12 sm:py-16 lg:py-18"
     >
       <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
         

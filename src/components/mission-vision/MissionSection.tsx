@@ -12,7 +12,7 @@ export function MissionSection() {
       ref={sectionRef}
       id="mission"
       aria-labelledby="mission-heading"
-      className="relative overflow-hidden bg-[#fbf9f4] py-24 sm:py-32 lg:py-40"
+      className="relative overflow-hidden bg-[#fbf9f4] py-12 sm:py-16 lg:py-20"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         

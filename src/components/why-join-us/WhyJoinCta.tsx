@@ -14,7 +14,7 @@ export function WhyJoinCta() {
       ref={ctaRef}
       id="join-cta"
       aria-labelledby="why-join-cta-heading"
-      className="relative overflow-hidden bg-[#112d1c] py-16 sm:py-20 lg:py-24 text-[#f8f5ee]"
+      className="relative overflow-hidden bg-[#112d1c] py-12 sm:py-16 lg:py-18 text-[#f8f5ee]"
     >
       {/* Background Architectural Grid Accent */}
       <div

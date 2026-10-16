@@ -10,7 +10,7 @@ export function ExecutiveMembersHero() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-10 lg:pt-14 pb-12 sm:pb-16 lg:pb-20"
+      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14"
     >
       {/* Background Architectural Grid Accent */}
       <div
@@ -28,12 +28,15 @@ export function ExecutiveMembersHero() {
           
           {/* Clean Editorial Eyebrow */}
           <div
-            className={`mb-3 sm:mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
+            className={`flex items-center gap-3 mb-3 sm:mb-4 transition-all duration-700 ease-out motion-reduce:transition-none ${
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
             }`}
           >
             <span className="text-[11px] sm:text-[11.5px] font-bold uppercase tracking-[0.28em] text-[#1b4d2e]">
-              Leadership
+              Leadership & Governance
+            </span>
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#1b4d2e]/10 text-[#1b4d2e] border border-[#1b4d2e]/20">
+              Interim Administration
             </span>
           </div>
 
@@ -46,9 +49,9 @@ export function ExecutiveMembersHero() {
               fontSize: "clamp(3rem, 7vw, 5.75rem)",
             }}
           >
-            Executive
+            Interim Executive
             <br />
-            <span className="italic font-light text-[#1b4d2e]">Members</span>
+            <span className="italic font-light text-[#1b4d2e]">Committee</span>
           </h1>
 
           {/* Supporting Copy */}
@@ -57,9 +60,20 @@ export function ExecutiveMembersHero() {
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Meet the dedicated leaders guiding the Assinman Alumni Network and helping
-            shape a stronger community of alumni united by purpose, service, and excellence.
+            Meet the dedicated interim leaders entrusted with guiding the Assinman Alumni Network through this foundational period, ensuring constitutional integrity, service, and unified alumni progress.
           </p>
+
+          {/* Interim Notice Badge */}
+          <div
+            className={`mt-6 inline-flex items-start sm:items-center gap-3 px-4 py-2.5 rounded-sm bg-[#1b4d2e]/5 border border-[#1b4d2e]/15 text-[#1b4d2e] text-[13px] sm:text-[13.5px] transition-all duration-700 delay-300 ease-out motion-reduce:transition-none ${
+              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+            }`}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1b4d2e] shrink-0 mt-1 sm:mt-0" />
+            <span className="text-[#3b4b3f]">
+              <strong className="font-semibold text-[#1b4d2e]">Interim Mandate:</strong> Appointed to coordinate network operations, constitutional processes, and membership mobilization.
+            </span>
+          </div>
 
         </div>
       </div>

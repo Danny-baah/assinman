@@ -4,7 +4,7 @@ import React from "react";
 
 export function ContactHero() {
   return (
-    <section className="relative w-full bg-[#fbfaf7] pt-32 pb-14 lg:pt-40 lg:pb-18 border-b border-[#1b4d2e]/10 overflow-hidden">
+    <section className="relative w-full bg-[#fbfaf7] pt-8 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14 border-b border-[#1b4d2e]/10 overflow-hidden">
       {/* Background Subtle Watermark */}
       <div className="absolute top-1/2 right-4 -translate-y-1/2 select-none pointer-events-none opacity-[0.03] text-[#1b4d2e] font-serif text-[120px] lg:text-[200px] font-bold tracking-tighter leading-none hidden md:block">
         CONNECT

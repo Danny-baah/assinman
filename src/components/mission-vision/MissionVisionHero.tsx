@@ -11,7 +11,7 @@ export function MissionVisionHero() {
   return (
     <section
       ref={heroRef}
-      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-10 lg:pt-14 pb-14 sm:pb-18 lg:pb-24"
+      className="relative overflow-hidden bg-[#f8f5ee] pt-8 sm:pt-12 lg:pt-16 pb-10 sm:pb-12 lg:pb-14"
     >
       {/* Background Architectural Grid Accent */}
       <div
@@ -81,12 +81,12 @@ export function MissionVisionHero() {
               }}
             >
               <Image
-                src="/assets/about-nurses.jpg"
-                alt="Assinman nursing professionals in clinical practice"
+                src="/assin/photo_2026-10-16_12-04-06.jpg"
+                alt="Assinman alumni wearing honors medals united in excellence"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-center grayscale-[15%] contrast-[1.04]"
+                className="object-cover object-center contrast-[1.04]"
               />
               <div
                 className="absolute inset-0 pointer-events-none"

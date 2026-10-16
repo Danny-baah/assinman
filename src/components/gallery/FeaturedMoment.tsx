@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function FeaturedMoment() {
   return (
-    <section className="relative w-full bg-white py-20 lg:py-28 overflow-hidden border-b border-[#1b4d2e]/10">
+    <section className="relative w-full bg-white py-12 sm:py-16 lg:py-20 overflow-hidden border-b border-[#1b4d2e]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
@@ -17,8 +17,8 @@ export function FeaturedMoment() {
               
               <div className="relative aspect-[4/3] sm:aspect-[16/10] w-full overflow-hidden bg-[#1b4d2e]/5 border border-[#1b4d2e]/15">
                 <Image
-                  src="/assets/gallery-conversation.jpg"
-                  alt="Ghanaian healthcare leaders and nurses sharing candid conversation and ideas at a health summit"
+                  src="/assin/photo_2026-10-16_12-04-06.jpg"
+                  alt="Assinman alumni members smiling proudly wearing alumni honors medals"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
                   className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
