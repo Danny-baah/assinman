@@ -32,28 +32,18 @@ const executives: Executive[] = [
   },
   {
     number: "02",
-    name: "Stella Korliky",
-    role: "Electoral Commissioner",
-    badge: "Interim Electoral Commissioner",
+    name: "Kofi Gyan",
+    role: "Vice President",
+    badge: "Interim Vice President",
     description:
-      "Oversees electoral administration, constitutional vetting frameworks, and transparent transition guidelines to guarantee fair, democratic representation across the network.",
-    image: "/executives/stella-korliky.jpg",
-    imagePosition: "object-[center_20%]",
-    duties: ["Electoral Frameworks", "Vetting & Compliance", "Democratic Transition"],
+      "Supports executive leadership in association administration, deputizes for the president in institutional engagements, and coordinates inter-committee alignment across all network initiatives.",
+    image: "/executives/kofi-gyan.jpg",
+    imagePosition: "object-[center_18%]",
+    featured: true,
+    duties: ["Executive Deputization", "Strategic Operations", "Inter-Committee Coordination"],
   },
   {
     number: "03",
-    name: "Asibey Felix",
-    role: "Auditor",
-    badge: "Interim Auditor",
-    description:
-      "Supervises financial auditing, accounting verification, asset registers, and fiduciary compliance to maintain rigorous fiscal transparency and accountability.",
-    image: "/executives/asibey-felix.jpg",
-    imagePosition: "object-[center_15%]",
-    duties: ["Fiscal Auditing", "Internal Controls", "Financial Transparency"],
-  },
-  {
-    number: "04",
     name: "Charity Egyir",
     role: "Secretary",
     badge: "Interim Secretary",
@@ -64,7 +54,51 @@ const executives: Executive[] = [
     duties: ["Secretariat Operations", "Official Correspondence", "Records & Archives"],
   },
   {
+    number: "04",
+    name: "Gifty Badu",
+    role: "Treasurer",
+    badge: "Interim Treasurer",
+    description:
+      "Oversees financial treasury administration, dues collection accounting, financial disbursements, and budgetary stewardship to protect association funds.",
+    image: "/executives/gifty-badu.jpg",
+    imagePosition: "object-[center_20%]",
+    duties: ["Treasury Management", "Dues Accounting", "Financial Stewardship"],
+  },
+  {
     number: "05",
+    name: "Francis Yebory",
+    role: "Organizer",
+    badge: "Interim Organizer",
+    description:
+      "Leads network mobilization, event planning, alumni outreach logistics, and physical arrangements for reunions, conventions, and general meetings.",
+    image: "/executives/francis-yebory.jpg",
+    imagePosition: "object-[center_15%]",
+    duties: ["Event Mobilization", "Logistics & Planning", "Alumni Outreach"],
+  },
+  {
+    number: "06",
+    name: "Stella Korliky",
+    role: "Electoral Commissioner",
+    badge: "Interim Electoral Commissioner",
+    description:
+      "Oversees electoral administration, constitutional vetting frameworks, and transparent transition guidelines to guarantee fair, democratic representation across the network.",
+    image: "/executives/stella-korliky.jpg",
+    imagePosition: "object-[center_20%]",
+    duties: ["Electoral Frameworks", "Vetting & Compliance", "Democratic Transition"],
+  },
+  {
+    number: "07",
+    name: "Asibey Felix",
+    role: "Auditor",
+    badge: "Interim Auditor",
+    description:
+      "Supervises financial auditing, accounting verification, asset registers, and fiduciary compliance to maintain rigorous fiscal transparency and accountability.",
+    image: "/executives/asibey-felix.jpg",
+    imagePosition: "object-[center_15%]",
+    duties: ["Fiscal Auditing", "Internal Controls", "Financial Transparency"],
+  },
+  {
+    number: "08",
     name: "Emmanuel Obeng Asumaning",
     role: "Welfare Officer",
     badge: "Interim Welfare Officer",
@@ -127,7 +161,7 @@ export function ExecutiveDirectorySection() {
           </p>
         </div>
 
-        {/* Editorial Directory Grid: 1 Featured President + 4 Officers in 2x2 */}
+        {/* Editorial Directory Grid: Featured Leadership + Officers in 2-col layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#1b4d2e]/12 border border-[#1b4d2e]/12">
           {executives.map((exec, idx) => (
             <div

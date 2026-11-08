@@ -18,6 +18,12 @@ const executives: Executive[] = [
     imagePosition: "object-[48%_15%]",
   },
   {
+    name: "Kofi Gyan",
+    role: "Vice President",
+    image: "/executives/kofi-gyan.jpg",
+    imagePosition: "object-[center_18%]",
+  },
+  {
     name: "Stella Korliky",
     role: "Electoral Commissioner",
     image: "/executives/stella-korliky.jpg",
