@@ -6,13 +6,20 @@ export interface ContactFormData {
   message: string;
 }
 
+export interface ContactDetailItem {
+  label: string;
+  href?: string;
+  type: "email" | "location" | "info" | "phone";
+}
+
 export interface ContactChannel {
   number: string;
   title: string;
   description: string;
-  detail: string;
-  detailType: "email" | "location" | "info";
+  detail?: string;
+  detailType?: "email" | "location" | "info" | "phone";
   href?: string;
+  items?: ContactDetailItem[];
 }
 
 export const CONTACT_CHANNELS: ContactChannel[] = [
@@ -21,9 +28,23 @@ export const CONTACT_CHANNELS: ContactChannel[] = [
     title: "GENERAL ENQUIRIES",
     description:
       "For questions about the alumni association, membership, activities, or general information.",
-    detail: "info@assinmanaan.org.gh",
-    detailType: "email",
-    href: "mailto:info@assinmanaan.org.gh",
+    items: [
+      {
+        label: "+233 (0) 55 662 0155",
+        href: "tel:+233556620155",
+        type: "phone",
+      },
+      {
+        label: "+233 (0) 54 572 5913",
+        href: "tel:+233545725913",
+        type: "phone",
+      },
+      {
+        label: "info@assinmanaan.org.gh",
+        href: "mailto:info@assinmanaan.org.gh",
+        type: "email",
+      },
+    ],
   },
   {
     number: "02",

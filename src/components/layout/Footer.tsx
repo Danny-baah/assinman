@@ -107,14 +107,22 @@ export function Footer() {
               Contact Us
             </h4>
             <ul className="space-y-4">
-              <li>
-                <a
-                  href="tel:+233240000000"
-                  className="flex items-center gap-3 text-[14px] sm:text-[15px] text-white/55 hover:text-white transition-colors duration-200"
-                >
-                  <Phone className="w-4 h-4 shrink-0 text-[#6aab7a]" aria-hidden="true" />
-                  <span>+233 24 000 0000</span>
-                </a>
+              <li className="flex items-start gap-3 text-[14px] sm:text-[15px] text-white/55">
+                <Phone className="w-4 h-4 shrink-0 text-[#6aab7a] mt-1" aria-hidden="true" />
+                <div className="flex flex-col space-y-1.5">
+                  <a
+                    href="tel:+233556620155"
+                    className="hover:text-white transition-colors duration-200"
+                  >
+                    +233 (0) 55 662 0155
+                  </a>
+                  <a
+                    href="tel:+233545725913"
+                    className="hover:text-white transition-colors duration-200"
+                  >
+                    +233 (0) 54 572 5913
+                  </a>
+                </div>
               </li>
               <li>
                 <a
@@ -141,6 +149,17 @@ export function Footer() {
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] sm:text-[13px] text-white/40">
           <p>© 2026 Assinman Alumni Network. All rights reserved.</p>
+          <p className="text-center">
+            Website design by{" "}
+            <a
+              href="https://wa.me/233551274445"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#6aab7a] hover:text-white font-medium transition-colors duration-200 underline decoration-white/20 hover:decoration-[#6aab7a] underline-offset-2"
+            >
+              TSS
+            </a>
+          </p>
           <div className="flex items-center gap-3">
             <span className="text-[#6aab7a] font-medium">AAN</span>
             <span>·</span>

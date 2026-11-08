@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import {
   Mail,
+  Phone,
   MapPin,
   HelpCircle,
   ArrowUpRight,
@@ -137,7 +138,65 @@ export function ContactChannelsAndForm() {
                       {channel.description}
                     </p>
 
-                    {channel.href ? (
+                    {channel.items ? (
+                      <div className="flex flex-col gap-2 pt-1">
+                        {channel.items.map((item, idx) => {
+                          const isExternal =
+                            item.href?.startsWith("tel:") || item.href?.startsWith("mailto:");
+                          const icon = (
+                            <>
+                              {item.type === "phone" && (
+                                <Phone className="w-3.5 h-3.5 text-[#1b4d2e] shrink-0" />
+                              )}
+                              {item.type === "email" && (
+                                <Mail className="w-3.5 h-3.5 text-[#1b4d2e] shrink-0" />
+                              )}
+                              {item.type === "location" && (
+                                <MapPin className="w-3.5 h-3.5 text-[#1b4d2e] shrink-0" />
+                              )}
+                              {item.type === "info" && (
+                                <HelpCircle className="w-3.5 h-3.5 text-[#1b4d2e] shrink-0" />
+                              )}
+                            </>
+                          );
+
+                          if (item.href) {
+                            if (isExternal) {
+                              return (
+                                <a
+                                  key={idx}
+                                  href={item.href}
+                                  className="inline-flex items-center gap-2 text-xs font-medium text-[#111827] hover:text-[#1b4d2e] transition-colors w-fit"
+                                >
+                                  {icon}
+                                  <span>{item.label}</span>
+                                </a>
+                              );
+                            }
+                            return (
+                              <Link
+                                key={idx}
+                                href={item.href}
+                                className="inline-flex items-center gap-2 text-xs font-medium text-[#111827] hover:text-[#1b4d2e] transition-colors w-fit"
+                              >
+                                {icon}
+                                <span>{item.label}</span>
+                              </Link>
+                            );
+                          }
+
+                          return (
+                            <div
+                              key={idx}
+                              className="inline-flex items-center gap-2 text-xs text-[#374151]"
+                            >
+                              {icon}
+                              <span>{item.label}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : channel.href ? (
                       <Link
                         href={channel.href}
                         className="inline-flex items-center gap-2 text-xs font-medium text-[#111827] hover:text-[#1b4d2e] transition-colors"
